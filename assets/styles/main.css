@@ -1,0 +1,40 @@
+:root {
+    --bg-light: #F7F6F2;
+    --bg: #313D33;
+    --text: #484743;
+    --text-light: #FFFFFF;
+    --text-dark: #000000;
+    --text-muted: #E1DDC3;
+    --highlight: #ED9D15;
+    --highlight-soft: #EDECE6;
+    --warning: #EBDBB9;
+    --warning-muted: #DC9313;
+}
+
+@layer base {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: var(--text);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.handwriting {
+    font-family: "Playfair Display", serif;
+}
+
+/* Navbar section */
+#logo {
+    font-family: "Allura", cursive;
+}

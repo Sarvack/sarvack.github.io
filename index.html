@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/styles/main.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Ade Sarva</title>
+</head>
+<body>
+    <nav id="navbar" class="grid grid-cols-4 items-center w-full px-14 py-10 box-border bg-(--bg-light)">
+        <ul class="flex justify-center items-center gap-20 col-span-2 col-start-2">
+            <li class="text-base font-medium">
+                <a href="#profile">ABOUT ME</a>
+            </li>
+            <li class="text-base font-medium">RESUME</li>
+            <li id="logo" class="text-[32px] font-normal">Ade Sarva</li>
+            <li class="text-base font-medium">WORK</li>
+            <li class="text-base font-medium">GET IN TOUCH</li>
+        </ul>
+        <ul class="flex justify-end gap-6">
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+                    <path fill="currentColor"
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+                    <path fill="currentColor"
+                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+                    <path
+                        d="M19.58 12.27c-.04-.62-.25-1.09-.62-1.41c-.37-.32-.83-.48-1.38-.48c-.58 0-1.08.17-1.39.51c-.33.34-.54.8-.62 1.38m6.35-.23c.08.41.08 1 .08 1.77h-6.5c.05.9.35 1.52.94 1.88c.35.23.78.34 1.29.34c.53 0 .96-.14 1.27-.41c.2-.15.36-.35.5-.62h2.38c-.06.54-.35 1.07-.88 1.62c-.78.88-1.9 1.3-3.34 1.3c-1.19 0-2.23-.37-3.16-1.1c-.88-.73-1.34-1.92-1.34-3.57c0-1.55.41-2.75 1.23-3.55c.82-.83 1.88-1.24 3.19-1.24c.77 0 1.47.14 2.09.42c.62.28 1.14.71 1.54 1.32c.37.53.6 1.14.71 1.84M9.58 14.07c0-.65-.27-1.1-.79-1.34c-.29-.13-.71-.2-1.25-.23H4.87v3.34H7.5c.54 0 .96-.07 1.26-.22c.55-.27.82-.79.82-1.55m-4.71-3.61H7.5c.54 0 1-.1 1.32-.31c.34-.2.5-.57.5-1.09c0-.56-.22-.96-.66-1.15c-.39-.13-.88-.19-1.47-.19H4.87m6.85 4.7c.32.5.48 1.11.48 1.82c0 .76-.2 1.4-.55 1.99a3.6 3.6 0 0 1-.88.98c-.4.29-.87.51-1.41.62c-.54.11-1.12.17-1.75.17H2V5.55h6c1.53.03 2.6.45 3.23 1.33c.38.53.57 1.16.57 1.9c0 .76-.19 1.37-.57 1.83c-.23.26-.53.5-.95.71c.63.23 1.11.6 1.44 1.1m8.34-5.1h-5.01V6.07h5.01v1.25z"
+                        fill="currentColor" />
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 48 48"><!-- Icon from IconPark Outline by ByteDance - https://github.com/bytedance/IconPark/blob/master/LICENSE -->
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                        <path
+                            d="M44 24a19.94 19.94 0 0 1-5.889 14.173A19.94 19.94 0 0 1 24 44C12.954 44 4 35.046 4 24a19.93 19.93 0 0 1 5.5-13.775A19.94 19.94 0 0 1 24 4a19.94 19.94 0 0 1 14.111 5.827A19.94 19.94 0 0 1 44 24" />
+                        <path d="M44 24c-2.918 0-10.968-1.1-18.173 2.063C18 29.5 12.333 34.832 9.863 38.147" />
+                        <path d="M16.5 5.454C19.63 8.343 26.46 15.698 29 23s3.48 16.28 4.06 18.835" />
+                        <path
+                            d="M4.154 21.5c3.778.228 13.779.433 20.179-2.3s11.907-7.76 13.796-9.355M5.5 31.613a20.08 20.08 0 0 0 9 9.991" />
+                        <path
+                            d="M4 24a19.93 19.93 0 0 1 5.5-13.775M24 4a19.94 19.94 0 0 0-14.5 6.225M32 5.664a20 20 0 0 1 6.111 4.163A19.94 19.94 0 0 1 44 24c0 2.462-.445 4.821-1.26 7M24 44a19.94 19.94 0 0 0 14.111-5.827" />
+                    </g>
+                </svg>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="relative flex items-end bg-(--bg) h-[1004px]">
+        <h1 class="bg-text z-10 font-semibold text-[15.6vw] -start-1vw top-[10%] text-center absolute handwriting">PORTOFOLIO</h1>
+        <a href="#profile" class="end-[1%] bottom-[2%] z-50 scroll-btn absolute rounded-full text-center size-20 bg-(--highlight) text-(--text-light) font-semibold text-xs flex items-center justify-center">
+            SCROLL DOWN
+        </a>
+
+        <div id="hero__content" class="z-20 relative pl-25 pb-18 box-content flex items-end">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" class="z-10 absolute start-[-3%] top-[-3%]"
+                    viewBox="0 0 16 16"><!-- Icon from Octicons by GitHub - https://github.com/primer/octicons/blob/main/LICENSE -->
+                    <path fill="var(--highlight)"
+                        d="M7.53 1.282a.5.5 0 0 1 .94 0l.478 1.306a7.5 7.5 0 0 0 4.464 4.464l1.305.478a.5.5 0 0 1 0 .94l-1.305.478a7.5 7.5 0 0 0-4.464 4.464l-.478 1.305a.5.5 0 0 1-.94 0l-.478-1.305a7.5 7.5 0 0 0-4.464-4.464L1.282 8.47a.5.5 0 0 1 0-.94l1.306-.478a7.5 7.5 0 0 0 4.464-4.464Z" />
+                </svg>
+                <div class="image-container overflow-hidden rounded-3xl relative shrink-0 z-20 w-[600px] h-[750px]">
+                    <img src="assets/images/hero.jpg" class="max-w-[none] start-[-60%] top-[-13%] absolute">
+                </div>
+            </div>
+
+            <div class="pl-16 shrink">
+                <h2 class="handwriting text-[140px] font-medium text-(--text-light)">PORTOFOLIO</h2>
+
+                <ul class="pt-8 pb-11">
+                    <li class="text-2xl text-(--highlight)">BE: /adesarva</li>
+                    <li class="text-2xl text-(--highlight)">IG: @adesarva</li>
+                    <li class="text-2xl text-(--highlight)">LI: @adesarva</li>
+                </ul>
+
+                <p class="text-2xl w-[50%] text-(--text-light)">I love design and anything related to art. I approach problems in a rational and pragmatic way and seek the simplest and
+                most functional solution possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="p-24 box-content">
+        <div class="grid grid-cols-3">
+            <div class="py-20 px-25 col-span-2">
+                <h1 class="handwriting text-9xl font-semibold text-(--text-dark)">Hello,<br>I'm Sarva !</h1>
+                <p class="text-2xl text-(--bg) py-8">I am a UI/UX Designer based in Bali, Indonesia. I enjoy making digital products easier to understand and use, drawing
+                heavily on my previous experience as a Full-Stack Developer. Because I understand the technical side, I design with a
+                focus on how products will actually be built, ensuring a seamless bridge between aesthetics and functionality.</p>
+            
+                <a href="" class="underline flex items-center gap-3 py-4 px-6 rounded-full bg-(--highlight) text-(--text-light) w-fit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Material Design Light by Pictogrammers - https://github.com/Templarian/MaterialDesignLight/blob/master/LICENSE.md -->
+                        <path fill="var(--text-light)"
+                            d="M9.5 4a6.5 6.5 0 0 1 6.5 6.5c0 1.62-.59 3.1-1.57 4.23l5.65 5.65l-.71.71l-5.65-5.65A6.47 6.47 0 0 1 9.5 17A6.5 6.5 0 0 1 3 10.5A6.5 6.5 0 0 1 9.5 4m0 1A5.5 5.5 0 0 0 4 10.5A5.5 5.5 0 0 0 9.5 16a5.5 5.5 0 0 0 5.5-5.5A5.5 5.5 0 0 0 9.5 5" />
+                    </svg>
+                    linkedin.com/in/ade-sarva
+                </a>
+            </div>
+
+            <div class="flex items-center justify-end">
+                <div class="w-130 p-10 box-content bg-(--bg) rounded-3xl">
+                    <div class="flex gap-50">
+                        <h4 class="text-(--highlight) font-semibold text-base relative after:absolute after:w-[35%] after:h-[2px] after:bg-(--highlight) after:start-0 after:bottom-[40%]">
+                            30TH APRIL 2001
+                        </h4>
+                        <h4 class="text-end text-(--text-light) text-sm">
+                            NATIONALITY<br>
+                            <span class="text-(--text-light) text-2xl font-semibold">Indonesia</span>
+                        </h4>
+                    </div>
+
+                    <div class="mx-auto size-60 bg-(--bg-light) rounded-xl my-18">
+
+                    </div>
+
+                    <h4 class="text-(--text-light) font-bold italic text-2xl tracking-[4%] handwriting">Contact</h4>
+                    <ul class="flex flex-col gap-3 mt-6">
+                        <li class="text-(--text-light) text-base flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE -->
+                                <path fill="none" stroke="var(--highlight)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="m21 3l-6.5 18a.55.55 0 0 1-1 0L10 14l-7-3.5a.55.55 0 0 1 0-1z" />
+                            </svg>
+                            Denpasar, Bali
+                        </li>
+                        <li class="text-(--text-light) text-base flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                                <path fill="var(--highlight)"
+                                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zM20 8l-7.475 4.675q-.125.075-.262.113t-.263.037t-.262-.037t-.263-.113L4 8v10h16zm-8 3l8-5H4zM4 8v.25v-1.475v.025V6v.8v-.012V8.25zv10z" />
+                            </svg>
+                            madesarvajana@gmil.com
+                        </li>
+                        <li class="text-(--text-light) text-base flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                                <path fill="var(--highlight)"
+                                    d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3M6.025 9l1.65-1.65L7.25 5H5.025q.125 1.025.35 2.025T6.025 9m8.95 8.95q.975.425 1.988.675T19 18.95v-2.2l-2.35-.475zm0 0" />
+                            </svg>
+                            081353376723
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-(--bg) p-24 pb-12 box-content">
+        <div class="grid grid-cols-3">
+            <div class="col-span-2">
+                <h1 class="text-(--highlight) handwriting italic font-semibold text-9xl">Education</h1>
+                <ul class="mt-20 flex flex-col gap-20">
+                    <li class="flex gap-15">
+                        <h5 class="handwriting text-(--highlight) text-2xl italic font-semibold">2023-2027</h5>
+                        <h5>
+                            <span class="block text-(--text-light) font-semibold text-2xl">Universitas Terbuka</span>
+                            <span class="block text-(--text-light) text-2xl mt-5">Bachelor of Management</span>
+                        </h5>
+                    </li>
+                    <li class="flex gap-15">
+                        <h5 class="handwriting text-(--highlight) text-2xl italic font-semibold">2019-2020</h5>
+                        <h5>
+                            <span class="block text-(--text-light) font-semibold text-2xl">New Media Collage</span>
+                            <span class="block text-(--text-light) text-2xl mt-5">Diploma of Web Programming & Networking</span>
+                        </h5>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex items-center justify-end">
+                <div class="bg-(--bg-light) w-130 rounded-3xl p-10 box-content">
+                    <h4 class="italic text-(--bg) font-semibold text-3xl handwriting">Technical Skills</h4>
+
+                    <div class="my-15">
+                        <h5 class="font-medium text-lg">SOFTWARE SKILLS</h5>
+                        <ul class="flex gap-4 my-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                    viewBox="0 0 24 24"><!-- Icon from Logos free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                                    <path fill="var(--text-dark)" fill-rule="evenodd"
+                                        d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm4.09 3h2.364v4.727H9.091A2.364 2.364 0 1 1 9.09 4m3.092 5.09V4h2.545a2.546 2.546 0 0 1 0 5.09zm2.363 5.274a2.364 2.364 0 1 0 0-4.728a2.364 2.364 0 0 0 0 4.728m-3.09 0V9.636H9.09a2.364 2.364 0 0 0 0 4.728zm0 3.272v-2.363H9.09a2.364 2.364 0 1 0 2.364 2.363Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                    viewBox="0 0 48 48"><!-- Icon from IconPark Solid by ByteDance - https://github.com/bytedance/IconPark/blob/master/LICENSE -->
+                                    <defs>
+                                        <mask id="SVG7SD0cenO">
+                                            <g fill="none" stroke-width="4">
+                                                <path fill="#fff" stroke="#fff"
+                                                    d="M39 6H9a3 3 0 0 0-3 3v30a3 3 0 0 0 3 3h30a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3Z" />
+                                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M14 15v18" />
+                                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M16 25c3 0 7-.8 7-5s-4-5-7-5h-2v10z" clip-rule="evenodd" />
+                                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M34 21.025c-1 0-6-.498-6 2.987s6 2.49 6 5.976s-6 2.987-6 2.987" />
+                                            </g>
+                                        </mask>
+                                    </defs>
+                                    <path fill="var(--text-dark)" d="M0 0h48v48H0z" mask="url(#SVG7SD0cenO)" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                    viewBox="0 0 24 24"><!-- Icon from Simple Icons by Simple Icons Collaborators - https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md -->
+                                    <path fill="var(--text-dark)"
+                                        d="M17.392 0H13.9L17 4.808L10.444 0H6.949l3.102 6.3L3.494 0H0l3.05 8.131L0 24h3.494L10.05 6.985L6.949 24h3.494L17 5.494L13.899 24h3.493L24 3.672z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h5 class="font-medium text-lg">CODING SKILLS</h5>
+                    <div class="flex justify-between">
+                        <ul class="flex flex-col gap-7 mt-5">
+                            <li class="text-(--bg) font-semibold">HTML</li>
+                            <li class="text-(--bg) font-semibold">CSS</li>
+                            <li class="text-(--bg) font-semibold">JAVASCRIPT</li>
+                            <li class="text-(--bg) font-semibold">PHP</li>
+                            <li class="text-(--bg) font-semibold">SQL</li>
+                        </ul>
+                        <ul class="flex flex-col gap-2 mt-5">
+                            <li class="text-(--bg) font-semibold">User-centered design & problem solving</li>
+                            <li class="text-(--bg) font-semibold">Wireframing & prototyping</li>
+                            <li class="text-(--bg) font-semibold">Visual hierarchy, typography & color</li>
+                            <li class="text-(--bg) font-semibold">Responsive UI design</li>
+                            <li class="text-(--bg) font-semibold">Design system & component usage</li>
+                            <li class="text-(--bg) font-semibold">Collaboration & design communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="bg-(--bg) p-24 pt-12 box-content relative">
+        
+        <div class="bg-(--highlight) rounded-3xl p-18 relative overflow-hidden">
+            <h1 class="text-(--bg) font-semibold handwriting italic text-9xl z-20 relative
+            after:absolute after:content-['EXPERIENCE'] after:text-[12vw] after:not-italic after:top-[-50%] after:start-[10%] after:text-(--warning-muted) after:-z-10">Experience</h1>
+            
+            <div class="grid grid-cols-3 gap-5 mt-20 relative z-20">
+                <div class="flex flex-col gap-5">
+                    <h2 class="text-(--bg) font-semibold handwriting italic text-[32px]">Jul 2021 - May 2023</h2>
+                    <h2 class="text-(--bg) font-semibold text-2xl">Junior Full Stack Developer</h2>
+                    <p class="text-(--bg) text-2xl">Fixing bugs and ensuring system stability. Collaborating with other developers in designing and implementing new
+                    features</p>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <h2 class="text-(--bg) font-semibold handwriting italic text-[32px]">Jun 2022 - Aug 2025</h2>
+                    <h2 class="text-(--bg) font-semibold text-2xl">Intermediate Full Stack Developer</h2>
+                    <p class="text-(--bg) text-2xl">Contributing to continuous improvements for system performance and usability</p>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <h2 class="text-(--bg) font-semibold handwriting italic text-[32px]">Aug 2025 - Present</h2>
+                    <h2 class="text-(--bg) font-semibold text-2xl">UI / UX Designer</h2>
+                    <p class="text-(--bg) text-2xl">Designing wireframes and high-fidelity prototypes using Figma . Analyzing systems and user flows to identify pain points
+                    and opportunities for improvement. Continuously learning and applying best practices in user experience and interface
+                    design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="language" class="p-24 box-content">
+        <div class="grid grid-cols-3">
+            <div class="col-span-2">
+                <h1 class="handwriting text-(--bg) italic font-semibold text-[80px] relative w-fit after:absolute after:start-0 after:bottom-0 after:w-full after:h-[3px] after:bg-(--highlight)">Language</h1>
+                <div class="flex gap-80 mt-10">
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-2xl text-(--bg) block">Bahasa</span>
+                        <span class="font-medium text-2xl text-(--bg) italic block mt-2">Native</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-2xl text-(--bg) block">English</span>
+                        <span class="font-medium text-2xl text-(--bg) italic block mt-2">Fluent</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-end">
+                <div class="bg-(--highlight-soft) border border-dashed border-(--bg) w-130 rounded-3xl p-10 box-content">
+                    <h2 class="handwriting text-(--bg) italic text-center text-[50px] font-semibold">Hobbies & Interes</h2>
+                    <div class="grid grid-cols-2 mt-10">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="size-20 rounded-full bg-(--warning) flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                                    <path fill="var(--highlight)"
+                                        d="M12 18q2.075 0 3.538-1.462Q17 15.075 17 13q0-2.075-1.462-3.538Q14.075 8 12 8Q9.925 8 8.463 9.462Q7 10.925 7 13q0 2.075 1.463 3.538Q9.925 18 12 18Zm0-2q-1.25 0-2.125-.875T9 13q0-1.25.875-2.125T12 10q1.25 0 2.125.875T15 13q0 1.25-.875 2.125T12 16Zm6-6q.425 0 .712-.288Q19 9.425 19 9t-.288-.713Q18.425 8 18 8t-.712.287Q17 8.575 17 9t.288.712Q17.575 10 18 10ZM4 21q-.825 0-1.412-.587Q2 19.825 2 19V7q0-.825.588-1.412Q3.175 5 4 5h3.15L8.7 3.325q.15-.15.337-.238Q9.225 3 9.425 3h5.15q.2 0 .388.087q.187.088.337.238L16.85 5H20q.825 0 1.413.588Q22 6.175 22 7v12q0 .825-.587 1.413Q20.825 21 20 21Zm16-2V7h-4.05l-1.825-2h-4.25L8.05 7H4v12Zm-8-6Z" />
+                                </svg>
+                            </div>
+
+                            <h4 class="font-semibold mt-5 text-base/[120%]">PHOTOGRAPHY</h4>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="size-20 rounded-full bg-(--warning) flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                    <path fill="none" stroke="var(--highlight)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M9.998 12L2 16c0 1.886 0 2.328.586 2.914S4.114 19.5 6 19.5h8c1.886 0 2.828 0 3.414-.586S18 17.886 18 16m-8.002-4l11.998-6M9.998 12L2 8c0-1.386 0-2.328.586-2.914S4.114 4.5 6 4.5h8c1.886 0 2.828 0 3.414.586S18 6.614 18 8m-8.002 4l11.998 6" />
+                                </svg>
+                            </div>
+
+                            <h4 class="font-semibold mt-5 text-base/[120%]">EDITING VIDEO & PHOTO</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-(--bg) px-24 py-8">
+        <div class="grid grid-cols-3 justify-center items-center">
+            <h1 class="text-start text-2xl handwriting text-(--text-light)">Ade Sarva</h1>
+            <h1 class="text-center text-xl text-(--text-light)/30">@<span id="year" class="text-xl text-(--text-light)/30""></span> Creative Portofolio. Designed with passion.</h1>
+            <ul class="flex justify-end gap-12">
+                <li class="text-lg text-(--text-light)/30">Behance</li>
+                <li class="text-lg text-(--text-light)/30">Instagram</li>
+                <li class="text-lg text-(--text-light)/30">Linkedin</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
